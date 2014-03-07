@@ -21,6 +21,8 @@
 		04CD672818CA239C00E6763D /* BlogReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CD672718CA239C00E6763D /* BlogReaderTests.m */; };
 		04CD673218CA23DD00E6763D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CD673118CA23DD00E6763D /* Main.storyboard */; };
 		04CD673518CA264400E6763D /* QSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CD673418CA264400E6763D /* QSTableViewController.m */; };
+		04CD673818CA602500E6763D /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CD673718CA602500E6763D /* BlogPost.m */; };
+		04CD673A18CA7D5E00E6763D /* treehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CD673918CA7D5E00E6763D /* treehouse.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		04CD673118CA23DD00E6763D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04CD673318CA264400E6763D /* QSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSTableViewController.h; path = ../QSTableViewController.h; sourceTree = "<group>"; };
 		04CD673418CA264400E6763D /* QSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QSTableViewController.m; path = ../QSTableViewController.m; sourceTree = "<group>"; };
+		04CD673618CA602500E6763D /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogPost.h; path = ../BlogPost.h; sourceTree = "<group>"; };
+		04CD673718CA602500E6763D /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogPost.m; path = ../BlogPost.m; sourceTree = "<group>"; };
+		04CD673918CA7D5E00E6763D /* treehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treehouse.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +118,8 @@
 		04CD670818CA239C00E6763D /* BlogReader */ = {
 			isa = PBXGroup;
 			children = (
+				04CD673618CA602500E6763D /* BlogPost.h */,
+				04CD673718CA602500E6763D /* BlogPost.m */,
 				04CD671118CA239C00E6763D /* QSAppDelegate.h */,
 				04CD671218CA239C00E6763D /* QSAppDelegate.m */,
 				04CD673318CA264400E6763D /* QSTableViewController.h */,
@@ -126,6 +133,7 @@
 		04CD670918CA239C00E6763D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04CD673918CA7D5E00E6763D /* treehouse.png */,
 				04CD670A18CA239C00E6763D /* BlogReader-Info.plist */,
 				04CD670B18CA239C00E6763D /* InfoPlist.strings */,
 				04CD670E18CA239C00E6763D /* main.m */,
@@ -228,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CD673A18CA7D5E00E6763D /* treehouse.png in Resources */,
 				04CD673218CA23DD00E6763D /* Main.storyboard in Resources */,
 				04CD670D18CA239C00E6763D /* InfoPlist.strings in Resources */,
 				04CD671518CA239C00E6763D /* Images.xcassets in Resources */,
@@ -252,6 +261,7 @@
 				04CD673518CA264400E6763D /* QSTableViewController.m in Sources */,
 				04CD671318CA239C00E6763D /* QSAppDelegate.m in Sources */,
 				04CD670F18CA239C00E6763D /* main.m in Sources */,
+				04CD673818CA602500E6763D /* BlogPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

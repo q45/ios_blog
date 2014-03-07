@@ -7,6 +7,8 @@
 //
 
 #import "QSTableViewController.h"
+#import "BlogPost.h"
+
 
 @interface QSTableViewController ()
 
@@ -27,6 +29,7 @@
 {
     [super viewDidLoad];
     
+
     NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary/"];
     NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
     
@@ -36,7 +39,19 @@
     
     NSLog(@"%@", dataDictionary);
     
-    self.blogPosts = [dataDictionary objectForKey:@"posts"];
+    self.blogPosts = [NSMutableArray array];
+    
+    NSArray *blogPostsArray = [dataDictionary objectForKey:@"posts"];
+    
+    for (NSDictionary *bpDictionary in blogPostsArray) {
+        BlogPost *blogPost = [BlogPost blogPostWithtitle:[bpDictionary objectForKey:@"title"]];
+        blogPost.author = [bpDictionary objectForKey:@"author"];
+        blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
+        
+        [self.blogPosts addObject:blogPost];
+    }
+    
+    //self.blogPosts = [dataDictionary objectForKey:@"posts"];
 
 }
 
@@ -66,10 +81,19 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [blogPost valueForKey:@"title"];
-    cell.detailTextLabel.text = [blogPost valueForKey:@"Author"];
+    if ([blogPost.thumbnail isKindOfClass:[NSString class]]) {
+    
+        NSData *imageData= [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
+        UIImage *image = [UIImage imageWithData:imageData];
+        cell.imageView.image = image;
+    } else {
+        cell.imageView.image = [UIImage imageNamed:@"treehouse.png"];
+    }
+    cell.textLabel.text = blogPost.title;
+    cell.detailTextLabel.text = blogPost.author;
+    
     
     return cell;
 }
