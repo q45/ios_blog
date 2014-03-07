@@ -48,11 +48,12 @@
         blogPost.author = [bpDictionary objectForKey:@"author"];
         blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
         blogPost.date = [bpDictionary objectForKey:@"date"];
+        blogPost.url = [NSURL URLWithString:[bpDictionary objectForKey:@"url"]];
         
         [self.blogPosts addObject:blogPost];
     }
     
-    //self.blogPosts = [dataDictionary objectForKey:@"posts"];
+    
 
 }
 
@@ -97,6 +98,16 @@
     
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Row Selected %d", indexPath.row);
+    
+    BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    
+    UIApplication *application = [UIApplication sharedApplication];
+    [application openURL:blogPost.url];
+    
 }
 
 /*
