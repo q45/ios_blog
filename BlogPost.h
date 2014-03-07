@@ -13,11 +13,13 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *author;
 @property (nonatomic, strong) NSString *thumbnail;
+@property (nonatomic, strong) NSString *date;
 
 // Deisginated Initializer
 -(id)initWithTitle:(NSString *)title;
 +(id)blogPostWithtitle:(NSString *) title;
 
 -(NSURL *)thumbnailURL;
+-(NSString *)formatedDate;
 
 @end
