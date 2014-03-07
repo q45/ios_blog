@@ -19,6 +19,8 @@
 		04CD671E18CA239C00E6763D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CD670618CA239C00E6763D /* UIKit.framework */; };
 		04CD672618CA239C00E6763D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04CD672418CA239C00E6763D /* InfoPlist.strings */; };
 		04CD672818CA239C00E6763D /* BlogReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CD672718CA239C00E6763D /* BlogReaderTests.m */; };
+		04CD673218CA23DD00E6763D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CD673118CA23DD00E6763D /* Main.storyboard */; };
+		04CD673518CA264400E6763D /* QSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CD673418CA264400E6763D /* QSTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		04CD672318CA239C00E6763D /* BlogReaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlogReaderTests-Info.plist"; sourceTree = "<group>"; };
 		04CD672518CA239C00E6763D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04CD672718CA239C00E6763D /* BlogReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogReaderTests.m; sourceTree = "<group>"; };
+		04CD673118CA23DD00E6763D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		04CD673318CA264400E6763D /* QSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSTableViewController.h; path = ../QSTableViewController.h; sourceTree = "<group>"; };
+		04CD673418CA264400E6763D /* QSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QSTableViewController.m; path = ../QSTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 		04CD66F618CA239C00E6763D = {
 			isa = PBXGroup;
 			children = (
+				04CD673118CA23DD00E6763D /* Main.storyboard */,
 				04CD670818CA239C00E6763D /* BlogReader */,
 				04CD672118CA239C00E6763D /* BlogReaderTests */,
 				04CD670118CA239C00E6763D /* Frameworks */,
@@ -109,6 +115,8 @@
 			children = (
 				04CD671118CA239C00E6763D /* QSAppDelegate.h */,
 				04CD671218CA239C00E6763D /* QSAppDelegate.m */,
+				04CD673318CA264400E6763D /* QSTableViewController.h */,
+				04CD673418CA264400E6763D /* QSTableViewController.m */,
 				04CD671418CA239C00E6763D /* Images.xcassets */,
 				04CD670918CA239C00E6763D /* Supporting Files */,
 			);
@@ -220,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CD673218CA23DD00E6763D /* Main.storyboard in Resources */,
 				04CD670D18CA239C00E6763D /* InfoPlist.strings in Resources */,
 				04CD671518CA239C00E6763D /* Images.xcassets in Resources */,
 			);
@@ -240,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CD673518CA264400E6763D /* QSTableViewController.m in Sources */,
 				04CD671318CA239C00E6763D /* QSAppDelegate.m in Sources */,
 				04CD670F18CA239C00E6763D /* main.m in Sources */,
 			);
